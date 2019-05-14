@@ -13,14 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.abomb4.userservice;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+package com.abomb4.abp.authentication
+
+/**
+ *
+ * @author yangrl14628 2019-05-14
+ */
+import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-public class UserServiceMain {
+object UserServiceMain {
 
-    public static void main(String[] args) {
-        System.out.println("Hello Workd!");
+    @JvmStatic
+    fun main(args: Array<String>) {
+        println("Hello Workd!")
     }
 }
