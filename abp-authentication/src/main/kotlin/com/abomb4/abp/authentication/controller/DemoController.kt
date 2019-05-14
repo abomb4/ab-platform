@@ -14,20 +14,21 @@
  * limitations under the License.
  */
 
-package com.abomb4.abp.authentication
+package com.abomb4.abp.authentication.controller
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
-import org.springframework.context.annotation.ComponentScan
+import org.springframework.ui.Model
+import org.springframework.ui.set
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RestController
 
-/**
- *
- * @author yangrl14628 2019-05-14
- */
-@SpringBootApplication
-@ComponentScan("com.abomb4.abp")
-open class UserServiceMain
+@RestController
+class DemoController {
 
-fun main(args: Array<String>) {
-    runApplication<UserServiceMain>(*args)
+    @GetMapping("/")
+    fun the(model: Model): Map<String, String> {
+        model["title"] = "The"
+        val map = HashMap<String, String>()
+        map.put("the", "the")
+        return map
+    }
 }

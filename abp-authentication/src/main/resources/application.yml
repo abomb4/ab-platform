@@ -1,4 +1,4 @@
-
+server.port: 8819
 
 # H2
 spring.h2.console.enabled: true
@@ -90,5 +90,4 @@ mybatis-plus:
     cache-enabled: false
 
 # logging
-logging:
-  level: debug
+logging.level.root: debug
