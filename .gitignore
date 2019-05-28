@@ -25,3 +25,10 @@ hs_err_pid*
 # Intellij IDEA
 .idea
 *.iml
+
+# Gradle
+build
+out
+
+# Maven
+target
