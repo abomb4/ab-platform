@@ -19,7 +19,6 @@ package com.abomb4.abp.authentication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.ComponentScan
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 
 /**
@@ -28,7 +27,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
  */
 @SpringBootApplication
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 @ComponentScan("com.abomb4.abp")
 open class UserServiceMain
 

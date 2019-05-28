@@ -17,6 +17,7 @@
 package com.abomb4.abp.authentication.controller
 
 import com.abomb4.abp.authentication.DemoPermissions
+import org.springframework.security.access.annotation.Secured
 import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.ui.Model
 import org.springframework.ui.set
@@ -35,7 +36,7 @@ open class DemoController {
     }
 
     @GetMapping("/protected/res1")
-    @PreAuthorize("hasAuthority('"+DemoPermissions.PROTECTED_RES_1+"')")
+    @Secured(DemoPermissions.PROTECTED_RES_1)
     fun res1(model: Model): Map<String, Any> {
         model["title"] = "The"
         val map = HashMap<String, Any>()

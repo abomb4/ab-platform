@@ -24,6 +24,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpStatus
 import org.springframework.security.access.AccessDecisionVoter
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
 import org.springframework.security.web.AuthenticationEntryPoint
@@ -36,6 +37,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher
  * @author yangrl14628 2019-05-14
  */
 @Configuration
+@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 open class SecurityConfig : WebSecurityConfigurerAdapter() {
 
     @Throws(Exception::class)
@@ -43,6 +45,7 @@ open class SecurityConfig : WebSecurityConfigurerAdapter() {
         http.authorizeRequests()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .antMatchers("/protected/res1").hasAuthority(DemoPermissions.PROTECTED_RES_1)
+                .antMatchers("/protected/res2").hasAuthority(DemoPermissions.PROTECTED_RES_2)
                 .anyRequest().denyAll()
 //                .accessDecisionManager(accessDecisionManager())
                 .and()
