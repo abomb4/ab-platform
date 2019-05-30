@@ -23,6 +23,7 @@
         <module>abp-authentication</module>
         <module>abp-framework</module>
         <module>abp-authorization</module>
+        <module>abp-demo</module>
     </modules>
 
     <build>
