@@ -1,5 +1,5 @@
 # ab-platform
-Personal top project. Based on Spring Boot, Spring cloud.
+Personal toy project. Based on Spring Boot, Spring cloud.
 
 # Structure Targets
 - [ ] Basic project source code structure
